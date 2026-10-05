@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мөнхзул багшдаа ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family: "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at top, #263b73 0%, #10152d 45%, #050712 100%);
+    color:white;
+}
+
+/* Background stars */
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2; transform:scale(.5);}
+    to{opacity:1; transform:scale(1.5);}
+}
+
+/* Main */
+.container{
+    position:relative;
+    z-index:5;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.card{
+    width:min(900px, 95%);
+    padding:55px 35px;
+    text-align:center;
+    border-radius:35px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
+    box-shadow:
+        0 0 40px rgba(117,156,255,.25),
+        inset 0 0 30px rgba(255,255,255,.04);
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(50px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.small{
+    color:#9db9ff;
+    font-size:18px;
+    letter-spacing:5px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:clamp(42px,8vw,85px);
+    margin:10px 0;
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #b9d1ff,
+        #fff,
+        #ffd5e5
+    );
+    background-size:300%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+
+.subtitle{
+    font-size:24px;
+    color:#ffd9e8;
+    margin-bottom:30px;
+}
+
+.code-box{
+    margin:25px auto;
+    max-width:650px;
+    text-align:left;
+    padding:22px;
+    border-radius:18px;
+    background:#070a15;
+    border:1px solid #33416e;
+    box-shadow:0 0 25px rgba(84,121,255,.15);
+    font-family:monospace;
+    color:#b9c8ff;
+}
+
+.code-box span{
+    color:#ff9fc3;
+}
+
+.message{
+    font-size:19px;
+    line-height:1.9;
+    color:#f3f5ff;
+    max-width:700px;
+    margin:auto;
+}
+
+.highlight{
+    color:#ffd0e2;
+    font-weight:bold;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff8fb7,#8daeff);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(255,143,183,.35);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 40px rgba(255,143,183,.7);
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:22px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    15%{opacity:1;}
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Confetti */
+.confetti{
+    position:fixed;
+    width:8px;
+    height:14px;
+    top:-20px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* Footer */
+.footer{
+    margin-top:25px;
+    font-size:14px;
+    color:#9da8ca;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Stars -->
+<script>
+for(let i=0;i<80;i++){
+    const star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+    star.style.animationDelay=Math.random()*3+"s";
+    document.body.appendChild(star);
+}
+</script>
+
+<div class="container">
+
+<div class="card">
+
+    <div class="small">TEACHER'S DAY • 2026</div>
+
+    <h1>Мөнхзул багшдаа</h1>
+
+    <div class="subtitle">
+        💻 Программчлалын гайхалтай багшдаа 🌷
+    </div>
+
+    <div class="code-box">
+        <div><span>const</span> teacher = <span>"Мөнхзул багш"</span>;</div>
+        <div><span>const</span> knowledge = <span>∞</span>;</div>
+        <div><span>const</span> inspiration = <span>true</span>;</div>
+        <div><span>const</span> gratitude = <span>"Хязгааргүй ❤️"</span>;</div>
+        <br>
+        <div><span>if</span> (teacher === amazing) {</div>
+        <div>&nbsp;&nbsp;console.log(<span>"Баярлалаа, багш аа! 💐"</span>);</div>
+        <div>}</div>
+    </div>
+
+    <p class="message">
+        Бидэнд зөвхөн <span class="highlight">код бичихийг</span> төдийгүй,
+        алдаанаас айхгүй байх, дахин оролдох,
+        өөрөөр сэтгэхийг зааж өгдөг
+        <span class="highlight">Мөнхзул багшдаа</span>
+        Багш нарын баярын мэнд хүргэе! 💐
+        <br><br>
+        Таны заасан мэдлэг бүр бидний ирээдүйн
+        <span class="highlight">шинэ мөрүүд</span> болж үлдэх болно. ✨
+    </p>
+
+    <button onclick="celebrate()">
+        💝 Баярын мэнд хүргэе!
+    </button>
+
+    <div class="footer">
+        Made with ❤️ &lt;/&gt; by your student
+    </div>
+
+</div>
+</div>
+
+<script>
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    const icons=["❤️","💗","💖","🌸","✨","💐"];
+
+    heart.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+    heart.style.fontSize=(15+Math.random()*25)+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+setInterval(createHeart,500);
+
+
+/* Celebration */
+
+function celebrate(){
+
+    for(let i=0;i<120;i++){
+
+        const c=document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left=Math.random()*100+"vw";
+
+        c.style.background=
+            `hsl(${Math.random()*360},90%,70%)`;
+
+        c.style.animationDuration=
+            (2+Math.random()*3)+"s";
+
+        c.style.animationDelay=
+            Math.random()*1+"s";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+            c.remove();
+        },5000);
+    }
+
+    alert("🌷 Багш аа, танд Багш нарын баярын мэнд хүргэе! ❤️");
+}
+
+</script>
+
+</body>
+</html>
